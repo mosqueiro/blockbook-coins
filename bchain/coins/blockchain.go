@@ -22,6 +22,7 @@ import (
 	"github.com/grupokindynos/coins-explorer/bchain/coins/eth"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/fydcoin"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/grs"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/idx"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/litecoin"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/masterwin"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/polis"
@@ -59,6 +60,7 @@ func init() {
 	BlockChainFactories["Colossus"] = colossus.NewColossusRPC
 	BlockChainFactories["Crown"] = crown.NewCrownRPC
 	BlockChainFactories["Daps"] = daps.NewDapsRPC
+	BlockChainFactories["Idx"] = idx.NewIdxRPC
 }
 
 // GetCoinNameFromConfig gets coin name and coin shortcut from config file

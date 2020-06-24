@@ -1,0 +1,67 @@
+{
+  "coin": {
+    "name": "Index Coin",
+    "shortcut": "IDX",
+    "label": "IndexCoin",
+    "alias": "idx"
+  },
+  "ports": {
+    "backend_rpc": 8030,
+    "backend_message_queue": 38330,
+    "blockbook_internal": 9030,
+    "blockbook_public": 9130
+  },
+  "ipc": {
+    "rpc_url_template": "http://127.0.0.1:{{.Ports.BackendRPC}}",
+    "rpc_user": "rpc",
+    "rpc_pass": "rpc",
+    "rpc_timeout": 25,
+    "message_queue_binding_template": "tcp://127.0.0.1:{{.Ports.BackendMessageQueue}}"
+  },
+  "backend": {
+    "package_name": "backend-idx",
+    "package_revision": "polispay",
+    "system_user": "idx",
+    "version": "0.13.10.6",
+    "binary_url": "https://github.com/IndexChain/Index/releases/download/v0.13.10.6/index-0.13.10.6-x86_64-linux-gnu.tar.gz",
+    "verification_type": "sha256",
+    "verification_source": "cf81ad723e933f63d3c9c8282dcdbd5eb103a0685b01b0284b619fcb75a732dc",
+    "extract_command": "tar -C backend --strip 1 -xf",
+    "exclude_files": [
+      "bin/index-qt"
+    ],
+    "exec_command_template": "{{.Env.BackendInstallPath}}/{{.Coin.Alias}}/bin/indexd -datadir={{.Env.BackendDataPath}}/{{.Coin.Alias}}/backend -conf={{.Env.BackendInstallPath}}/{{.Coin.Alias}}/{{.Coin.Alias}}.conf -pid=/run/{{.Coin.Alias}}/{{.Coin.Alias}}.pid",
+    "logrotate_files_template": "{{.Env.BackendDataPath}}/{{.Coin.Alias}}/backend/*.log",
+    "postinst_script_template": "",
+    "service_type": "forking",
+    "service_additional_params_template": "",
+    "protect_memory": true,
+    "mainnet": true,
+    "server_config_file": "bitcoin_like.conf",
+    "client_config_file": "bitcoin_like_client.conf",
+    "additional_params": {
+      "mempoolexpiry": 72
+    }
+  },
+  "blockbook": {
+    "package_name": "blockbook-idx",
+    "system_user": "blockbook-idx",
+    "internal_binding_template": ":{{.Ports.BlockbookInternal}}",
+    "public_binding_template": ":{{.Ports.BlockbookPublic}}",
+    "explorer_url": "",
+    "additional_params": "-dbcache=0 -workers=1",
+    "block_chain": {
+      "parse": true,
+      "mempool_workers": 8,
+      "mempool_sub_workers": 2,
+      "block_addresses_to_keep": 300,
+      "xpub_magic": 76067358,
+      "slip44": 0,
+      "additional_params": {}
+    }
+  },
+  "meta": {
+    "package_maintainer": "Felicio Xavier",
+    "package_maintainer_email": "admin@indexchain.org"
+  }
+}
