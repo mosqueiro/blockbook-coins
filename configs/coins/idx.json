@@ -24,8 +24,6 @@
     "system_user": "idx",
     "version": "0.13.10.6",
     "binary_url": "https://github.com/IndexChain/Index/releases/download/v0.13.10.6/index-0.13.10.6-x86_64-linux-gnu.tar.gz",
-    "verification_type": "sha256",
-    "verification_source": "cf81ad723e933f63d3c9c8282dcdbd5eb103a0685b01b0284b619fcb75a732dc",
     "extract_command": "tar -C backend --strip 1 -xf",
     "exclude_files": [
       "bin/index-qt"
