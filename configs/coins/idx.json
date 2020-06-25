@@ -1,8 +1,8 @@
 {
   "coin": {
-    "name": "Index Coin",
+    "name": "Index",
     "shortcut": "IDX",
-    "label": "IDX",
+    "label": "Index",
     "alias": "IDX"
   },
   "ports": {
