@@ -60,7 +60,7 @@ func init() {
 	BlockChainFactories["Colossus"] = colossus.NewColossusRPC
 	BlockChainFactories["Crown"] = crown.NewCrownRPC
 	BlockChainFactories["Daps"] = daps.NewDapsRPC
-	BlockChainFactories["Idx"] = idx.NewIdxRPC
+	BlockChainFactories["Index"] = idx.NewIdxRPC
 }
 
 // GetCoinNameFromConfig gets coin name and coin shortcut from config file
