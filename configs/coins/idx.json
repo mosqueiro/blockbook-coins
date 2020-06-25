@@ -2,8 +2,8 @@
   "coin": {
     "name": "Index Coin",
     "shortcut": "IDX",
-    "label": "IndexCoin",
-    "alias": "idx"
+    "label": "IDX",
+    "alias": "IDX"
   },
   "ports": {
     "backend_rpc": 8030,
