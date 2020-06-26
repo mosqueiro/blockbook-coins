@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/telos"
 	"io/ioutil"
 	"math/big"
 	"reflect"
@@ -61,6 +62,7 @@ func init() {
 	BlockChainFactories["Crown"] = crown.NewCrownRPC
 	BlockChainFactories["Daps"] = daps.NewDapsRPC
 	BlockChainFactories["Index"] = idx.NewIdxRPC
+	BlockChainFactories["Telos"] = telos.NewTelosRPC
 }
 
 // GetCoinNameFromConfig gets coin name and coin shortcut from config file

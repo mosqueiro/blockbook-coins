@@ -1,4 +1,4 @@
-package zcoin
+package telos
 
 import (
 	"encoding/json"
@@ -8,16 +8,16 @@ import (
 	"github.com/juju/errors"
 )
 
-type ZcoinRPC struct {
+type TelosRPC struct {
 	*btc.BitcoinRPC
 }
 
-func NewZcoinRPC(config json.RawMessage, pushHandler func(bchain.NotificationType)) (bchain.BlockChain, error) {
+func NewTelosRPC(config json.RawMessage, pushHandler func(bchain.NotificationType)) (bchain.BlockChain, error) {
 	b, err := btc.NewBitcoinRPC(config, pushHandler)
 	if err != nil {
 		return nil, err
 	}
-	s := &ZcoinRPC{
+	s := &TelosRPC{
 		b.(*btc.BitcoinRPC),
 	}
 	s.RPCMarshaler = btc.JSONMarshalerV1{}
@@ -25,21 +25,21 @@ func NewZcoinRPC(config json.RawMessage, pushHandler func(bchain.NotificationTyp
 	return s, nil
 }
 
-func (b *ZcoinRPC) Initialize() error {
+func (b *TelosRPC) Initialize() error {
 	ci, err := b.GetChainInfo()
 	if err != nil {
 		return err
 	}
 	chainName := ci.Chain
 	params := GetChainParams(chainName)
-	b.Parser = NewZcoinParser(params, b.ChainConfig)
+	b.Parser = NewTelosParser(params, b.ChainConfig)
 	b.Testnet = false
 	b.Network = "livenet"
 	glog.Info("rpc: block chain ", params.Name)
 	return nil
 }
 
-func (b *ZcoinRPC) GetBlock(hash string, height uint32) (*bchain.Block, error) {
+func (b *TelosRPC) GetBlock(hash string, height uint32) (*bchain.Block, error) {
 	var err error
 	if hash == "" && height > 0 {
 		hash, err = b.GetBlockHash(height)
@@ -78,6 +78,6 @@ func (b *ZcoinRPC) GetBlock(hash string, height uint32) (*bchain.Block, error) {
 	return block, nil
 }
 
-func (b *ZcoinRPC) GetTransactionForMempool(txid string) (*bchain.Tx, error) {
+func (b *TelosRPC) GetTransactionForMempool(txid string) (*bchain.Tx, error) {
 	return b.GetTransaction(txid)
 }

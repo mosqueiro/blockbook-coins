@@ -1,4 +1,4 @@
-package zcoin
+package telos
 
 import (
 	"github.com/grupokindynos/coins-explorer/bchain"
@@ -9,7 +9,7 @@ import (
 )
 
 const (
-	MainnetMagic wire.BitcoinNet = 0xf1fed9e3
+	MainnetMagic wire.BitcoinNet = 0x534c4554
 )
 
 var (
@@ -20,17 +20,17 @@ func init() {
 	MainNetParams = chaincfg.MainNetParams
 	MainNetParams.Net = MainnetMagic
 
-	MainNetParams.PubKeyHashAddrID = []byte{82}
-	MainNetParams.ScriptHashAddrID = []byte{7}
+	MainNetParams.PubKeyHashAddrID = []byte{38}
+	MainNetParams.ScriptHashAddrID = []byte{138}
 }
 
-type ZcoinParser struct {
+type TelosParser struct {
 	*btc.BitcoinParser
 	baseparser *bchain.BaseParser
 }
 
-func NewZcoinParser(params *chaincfg.Params, c *btc.Configuration) *ZcoinParser {
-	return &ZcoinParser{BitcoinParser: btc.NewBitcoinParser(params, c), baseparser: &bchain.BaseParser{}}
+func NewTelosParser(params *chaincfg.Params, c *btc.Configuration) *TelosParser {
+	return &TelosParser{BitcoinParser: btc.NewBitcoinParser(params, c), baseparser: &bchain.BaseParser{}}
 }
 
 func GetChainParams(chain string) *chaincfg.Params {
@@ -43,10 +43,10 @@ func GetChainParams(chain string) *chaincfg.Params {
 	return &MainNetParams
 }
 
-func (p *ZcoinParser) PackTx(tx *bchain.Tx, height uint32, blockTime int64) ([]byte, error) {
+func (p *TelosParser) PackTx(tx *bchain.Tx, height uint32, blockTime int64) ([]byte, error) {
 	return p.baseparser.PackTx(tx, height, blockTime)
 }
 
-func (p *ZcoinParser) UnpackTx(buf []byte) (*bchain.Tx, uint32, error) {
+func (p *TelosParser) UnpackTx(buf []byte) (*bchain.Tx, uint32, error) {
 	return p.baseparser.UnpackTx(buf)
 }
