@@ -18,11 +18,11 @@ require (
 	github.com/gorilla/websocket v1.4.1
 	github.com/juju/errors v0.0.0-20190930114154-d42613fe1ab9
 	github.com/juju/loggo v0.0.0-20190526231331-6e530bcce5d8 // indirect
-	github.com/juju/testing v0.0.0-20191001232224-ce9dec17d28b // indirect
+	github.com/juju/testing v0.0.0-20200608005635-e4eedbc6f7aa // indirect
 	github.com/martinboehm/btcd v0.0.0-20200313230603-83af86142d93
 	github.com/martinboehm/btcutil v0.0.0-20200229134221-d7706467ae8f
 	github.com/martinboehm/golang-socketio v0.0.0-20180414165752-f60b0a8befde
-	github.com/pebbe/zmq4 v1.2.0
+	github.com/pebbe/zmq4 v1.2.1
 	github.com/prometheus/client_golang v1.5.1
 	github.com/tecbot/gorocksdb v0.0.0-20191217155057-f0fad39f321c
 	golang.org/x/crypto v0.0.0-20200317142112-1b76d66859c6
