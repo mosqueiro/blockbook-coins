@@ -1,6 +1,6 @@
 # initialize from the image
 
-FROM debian:9
+FROM ubuntu:bionic
 
 ENV DEBIAN_FRONTEND="noninteractive"
 
