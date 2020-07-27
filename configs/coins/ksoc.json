@@ -20,11 +20,13 @@
   },
   "backend": {
     "package_name": "backend-ksoc",
-    "package_revision": "polispay",
+    "package_revision": "zcore",
     "system_user": "ksoc",
-    "version": "2.2.0",
+    "version": "1.0.0.2",
     "binary_url": "https://files.zcore.cash/daemons/kicksoccer.tar.gz",
-    "extract_command": "unzip -j -d backend",
+    "verification_type": "sha256",
+    "verification_source": "535e4a59c5efd732b8f4c3afcea6a8467446e8537fc2d376b062d4a82da7e296",
+    "extract_command": "tar -C backend --strip 1 -xf",
     "exclude_files": [
       "bin/transcendence-qt"
     ],
