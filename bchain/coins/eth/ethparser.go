@@ -2,7 +2,7 @@ package eth
 
 import (
 	"encoding/hex"
-	"github.com/grupokindynos/coins-explorer/bchain"
+	"github.com/mosqueiro/blockbook-coins/bchain"
 	"math/big"
 	"strconv"
 

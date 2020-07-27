@@ -1,7 +1,7 @@
 package db
 
 import (
-	"github.com/grupokindynos/coins-explorer/bchain"
+	"github.com/mosqueiro/blockbook-coins/bchain"
 	"time"
 
 	"github.com/golang/glog"

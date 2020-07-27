@@ -2,10 +2,10 @@ package server
 
 import (
 	"encoding/json"
-	"github.com/grupokindynos/coins-explorer/api"
-	"github.com/grupokindynos/coins-explorer/bchain"
-	"github.com/grupokindynos/coins-explorer/common"
-	"github.com/grupokindynos/coins-explorer/db"
+	"github.com/mosqueiro/blockbook-coins/api"
+	"github.com/mosqueiro/blockbook-coins/bchain"
+	"github.com/mosqueiro/blockbook-coins/common"
+	"github.com/mosqueiro/blockbook-coins/db"
 	"math/big"
 	"net/http"
 	"runtime/debug"

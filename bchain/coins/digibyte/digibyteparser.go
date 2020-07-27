@@ -1,7 +1,7 @@
 package digibyte
 
 import (
-	"github.com/grupokindynos/coins-explorer/bchain/coins/btc"
+	"github.com/mosqueiro/blockbook-coins/bchain/coins/btc"
 
 	"github.com/martinboehm/btcd/wire"
 	"github.com/martinboehm/btcutil/chaincfg"

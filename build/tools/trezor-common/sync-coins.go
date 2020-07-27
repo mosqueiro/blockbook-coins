@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	build "github.com/grupokindynos/coins-explorer/build/tools"
+	build "github.com/mosqueiro/blockbook-coins/build/tools"
 	"io"
 	"io/ioutil"
 	"net/http"

@@ -1,4 +1,4 @@
-module github.com/grupokindynos/coins-explorer
+module github.com/mosqueiro/blockbook-coins
 
 go 1.13
 

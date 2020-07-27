@@ -40,12 +40,12 @@ RUN go get github.com/gobuffalo/packr/...
 
 # download pre-loaded depencencies
 RUN \
-    cleanup() { rm -rf $GOPATH/src/github.com/grupokindynos ; } && \
+    cleanup() { rm -rf $GOPATH/src/github.com/mosqueiro ; } && \
     trap cleanup EXIT && \
-    mkdir -p $GOPATH/src/github.com/grupokindynos && \
-    cd $GOPATH/src/github.com/grupokindynos && \
-    git clone https://github.com/grupokindynos/coins-explorer.git && \
-    cd coins-explorer && \
+    mkdir -p $GOPATH/src/github.com/mosqueiro && \
+    cd $GOPATH/src/github.com/mosqueiro && \
+    git clone https://github.com/mosqueiro/blockbook-coins.git && \
+    cd blockbook-coins && \
     env GO111MODULE=on go mod vendor && \
     cp -r vendor /build/vendor
 ADD Makefile /build/Makefile

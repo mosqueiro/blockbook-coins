@@ -3,8 +3,8 @@ package daps
 import (
 	"encoding/json"
 
-	"github.com/grupokindynos/coins-explorer/bchain"
-	"github.com/grupokindynos/coins-explorer/bchain/coins/btc"
+	"github.com/mosqueiro/blockbook-coins/bchain"
+	"github.com/mosqueiro/blockbook-coins/bchain/coins/btc"
 
 	"github.com/golang/glog"
 	"github.com/juju/errors"

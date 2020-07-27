@@ -3,8 +3,8 @@ package colossus
 import (
 	"encoding/json"
 	"github.com/golang/glog"
-	"github.com/grupokindynos/coins-explorer/bchain"
-	"github.com/grupokindynos/coins-explorer/bchain/coins/btc"
+	"github.com/mosqueiro/blockbook-coins/bchain"
+	"github.com/mosqueiro/blockbook-coins/bchain/coins/btc"
 )
 
 // ColossusRPC is an interface to JSON-RPC bitcoind service.

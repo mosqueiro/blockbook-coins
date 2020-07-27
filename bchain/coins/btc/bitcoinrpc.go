@@ -5,7 +5,7 @@ import (
 	"context"
 	"encoding/hex"
 	"encoding/json"
-	"github.com/grupokindynos/coins-explorer/bchain"
+	"github.com/mosqueiro/blockbook-coins/bchain"
 	"io"
 	"io/ioutil"
 	"math/big"

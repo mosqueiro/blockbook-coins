@@ -5,9 +5,9 @@ package sync
 import (
 	"encoding/json"
 	"errors"
-	"github.com/grupokindynos/coins-explorer/bchain"
-	"github.com/grupokindynos/coins-explorer/common"
-	"github.com/grupokindynos/coins-explorer/db"
+	"github.com/mosqueiro/blockbook-coins/bchain"
+	"github.com/mosqueiro/blockbook-coins/common"
+	"github.com/mosqueiro/blockbook-coins/db"
 	"io/ioutil"
 	"os"
 	"path/filepath"

@@ -2,8 +2,8 @@ package api
 
 import (
 	"fmt"
-	"github.com/grupokindynos/coins-explorer/bchain"
-	"github.com/grupokindynos/coins-explorer/db"
+	"github.com/mosqueiro/blockbook-coins/bchain"
+	"github.com/mosqueiro/blockbook-coins/db"
 	"math/big"
 	"sort"
 	"sync"

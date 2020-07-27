@@ -3,7 +3,7 @@ color=`tput setaf 2`
 
 reset=`tput sgr0`
 
-echo "${color}Kindynos Blockbook Installer${reset}"
+echo "${color}ZCore Blockbook Installer${reset}"
 
 sleep 1
 
@@ -46,9 +46,9 @@ echo "${color}Building Blockbook....${reset}"
 
 sleep 1
 
-git clone https://github.com/grupokindynos/coins-explorer.git && cd coins-explorer && make all-${ticker}
+git clone https://github.com/mosqueiro/blockbook-coins.git && cd blockbook-coins && make all-${ticker}
 
-apt install /root/coins-explorer/build/*.deb -y
+apt install /root/blockbook-coins/build/*.deb -y
 
 sleep 1
 

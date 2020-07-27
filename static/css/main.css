@@ -1,3 +1,4 @@
+/*
 @font-face {
     font-family: "all-round-gothic";
     font-style: normal;
@@ -11,6 +12,7 @@
     font-weight: normal;
     src: url("../assets/fonts/gothic.woff2");
 }
+*/
 
 html, body {
     height: 100%;
@@ -109,12 +111,12 @@ h3 {
     margin: 0;
     padding-bottom: 0;
     padding-top: 0;
-    background-color: #17A47E;
+    background-color: #003333;
     border: 0;
 }
 
 .bg-polispay {
-    background-color: #17A47E;
+    background-color: #003333;
     padding-top: 3px;
     padding-bottom: 2px;
     z-index: 2;
@@ -145,7 +147,7 @@ h3 {
 }
 
 #footer {
-    background-color: #17A47E;
+    background-color: #003333;
     color: #fff;
     height: 42px;
     overflow: hidden;

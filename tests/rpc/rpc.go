@@ -4,7 +4,7 @@ package rpc
 
 import (
 	"encoding/json"
-	"github.com/grupokindynos/coins-explorer/bchain"
+	"github.com/mosqueiro/blockbook-coins/bchain"
 	"io/ioutil"
 	"path/filepath"
 	"reflect"
