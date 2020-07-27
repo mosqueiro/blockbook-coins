@@ -23,7 +23,7 @@ echo "${color}Building system dependencies........${reset}"
 
 sleep 1
 
-add-apt-repository ppa:bitcoin/bitcoin -y && apt-get update && apt-get install git apt-transport-https ca-certificates curl gnupg-agent software-properties-common build-essential libtool autotools-dev autoconf pkg-config libssl-dev libevent-dev automake libminiupnpc-dev libdb4.8-dev libdb4.8++-dev nginx -y
+add-apt-repository ppa:bitcoin/bitcoin -y && apt-get update && apt-get install git apt-transport-https ca-certificates curl gnupg-agent software-properties-common build-essential libtool autotools-dev autoconf pkg-config libssl-dev libevent-dev automake libminiupnpc-dev libdb4.8-dev libdb4.8++-dev nginx libboost-program-options-dev -y
 
 sleep 1
 
