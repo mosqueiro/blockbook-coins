@@ -1,4 +1,7 @@
 #!/bin/bash
+
+#ubuntu 18.04
+
 color=`tput setaf 2`
 
 reset=`tput sgr0`
@@ -47,6 +50,8 @@ echo "${color}Building Blockbook....${reset}"
 sleep 1
 
 git clone https://github.com/mosqueiro/blockbook-coins.git && cd blockbook-coins && make all-${ticker}
+
+sudo chown _apt /var/lib/update-notifier/package-data-downloads/partial/
 
 apt install /root/blockbook-coins/build/*.deb -y
 
