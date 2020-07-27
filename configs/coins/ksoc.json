@@ -13,8 +13,8 @@
   },
   "ipc": {
     "rpc_url_template": "http://127.0.0.1:{{.Ports.BackendRPC}}",
-    "rpc_user": "rpczcore1",
-    "rpc_pass": "rpczcore1",
+    "rpc_user": "ksocrpc",
+    "rpc_pass": "BeJRwvpKaqUhYqJR2FyUktivNnvVygTsjGdzDpVvnB2H",
     "rpc_timeout": 25,
     "message_queue_binding_template": "tcp://127.0.0.1:{{.Ports.BackendMessageQueue}}"
   },
