@@ -7,6 +7,7 @@ import (
 	"github.com/mosqueiro/blockbook-coins/bchain/coins/telos"
 	"github.com/mosqueiro/blockbook-coins/bchain/coins/ksoc"
 	"github.com/mosqueiro/blockbook-coins/bchain/coins/bbk"	
+	"github.com/mosqueiro/blockbook-coins/bchain/coins/axel"	
 	"io/ioutil"
 	"math/big"
 	"reflect"
