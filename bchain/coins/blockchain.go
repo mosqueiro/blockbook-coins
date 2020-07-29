@@ -68,6 +68,7 @@ func init() {
 	BlockChainFactories["Telos"] = telos.NewTelosRPC
 	BlockChainFactories["Ksoc"] = ksoc.NewKsocRPC
 	BlockChainFactories["BBK"] = bbk.NewBBKRPC
+	BlockChainFactories["Axel"] = axel.NewAxelRPC
 }
 
 // GetCoinNameFromConfig gets coin name and coin shortcut from config file
