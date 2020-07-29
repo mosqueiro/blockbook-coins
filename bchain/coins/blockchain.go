@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"github.com/mosqueiro/blockbook-coins/bchain/coins/telos"
 	"github.com/mosqueiro/blockbook-coins/bchain/coins/ksoc"
+	"github.com/mosqueiro/blockbook-coins/bchain/coins/bbk"	
 	"io/ioutil"
 	"math/big"
 	"reflect"
@@ -65,6 +66,7 @@ func init() {
 	BlockChainFactories["Index"] = idx.NewIdxRPC
 	BlockChainFactories["Telos"] = telos.NewTelosRPC
 	BlockChainFactories["Ksoc"] = ksoc.NewKsocRPC
+	BlockChainFactories["BBK"] = bbk.NewBBKRPC
 }
 
 // GetCoinNameFromConfig gets coin name and coin shortcut from config file
