@@ -25,6 +25,18 @@
                     <td class="data">{{if .InternalExplorer}}<a href="/block/{{$bb.BestHeight}}">{{$bb.BestHeight}}</a>{{else}}{{$bb.BestHeight}}{{end}}</td>
                 </tr>
                 <tr>
+                    <td>Last Block Update</td>
+                    <td class="data">{{formatTime $bb.LastBlockTime}}</td>
+                </tr>
+                <tr>
+                    <td>Mempool in Sync</td>
+                    <td class="data {{if not $bb.InSyncMempool}}text-danger{{else}}text-success{{end}}">{{$bb.InSyncMempool}}</td>
+                </tr>
+                <tr>
+                    <td>Last Mempool Update</td>
+                    <td class="data">{{formatTime $bb.LastMempoolTime}}</td>
+                </tr>
+                <tr>
                     <td>Transactions in Mempool</td>
                     <td class="data">{{if .InternalExplorer}}<a href="/mempool">{{$bb.MempoolSize}}</a>{{else}}{{$bb.MempoolSize}}{{end}}</td>
                 </tr>
