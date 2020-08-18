@@ -24,13 +24,13 @@ func init() {
 	MainNetParams.ScriptHashAddrID = []byte{85}
 }
 
-type BBKParser struct {
+type BbkParser struct {
 	*btc.BitcoinParser
 	baseparser *bchain.BaseParser
 }
 
-func NewBBKParser(params *chaincfg.Params, c *btc.Configuration) *BBKParser {
-	return &BBKParser{BitcoinParser: btc.NewBitcoinParser(params, c), baseparser: &bchain.BaseParser{}}
+func NewBbkParser(params *chaincfg.Params, c *btc.Configuration) *BbkParser {
+	return &BbkParser{BitcoinParser: btc.NewBitcoinParser(params, c), baseparser: &bchain.BaseParser{}}
 }
 
 func GetChainParams(chain string) *chaincfg.Params {
@@ -43,10 +43,10 @@ func GetChainParams(chain string) *chaincfg.Params {
 	return &MainNetParams
 }
 
-func (p *BBKParser) PackTx(tx *bchain.Tx, height uint32, blockTime int64) ([]byte, error) {
+func (p *BbkParser) PackTx(tx *bchain.Tx, height uint32, blockTime int64) ([]byte, error) {
 	return p.baseparser.PackTx(tx, height, blockTime)
 }
 
-func (p *BBKParser) UnpackTx(buf []byte) (*bchain.Tx, uint32, error) {
+func (p *BbkParser) UnpackTx(buf []byte) (*bchain.Tx, uint32, error) {
 	return p.baseparser.UnpackTx(buf)
 }

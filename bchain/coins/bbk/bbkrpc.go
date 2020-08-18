@@ -8,16 +8,16 @@ import (
 	"github.com/juju/errors"
 )
 
-type BBKRPC struct {
+type BbkRPC struct {
 	*btc.BitcoinRPC
 }
 
-func NewBBKRPC(config json.RawMessage, pushHandler func(bchain.NotificationType)) (bchain.BlockChain, error) {
+func NewBbkRPC(config json.RawMessage, pushHandler func(bchain.NotificationType)) (bchain.BlockChain, error) {
 	b, err := btc.NewBitcoinRPC(config, pushHandler)
 	if err != nil {
 		return nil, err
 	}
-	s := &BBKRPC{
+	s := &BbkRPC{
 		b.(*btc.BitcoinRPC),
 	}
 	s.RPCMarshaler = btc.JSONMarshalerV1{}
@@ -25,21 +25,21 @@ func NewBBKRPC(config json.RawMessage, pushHandler func(bchain.NotificationType)
 	return s, nil
 }
 
-func (b *BBKRPC) Initialize() error {
+func (b *BbkRPC) Initialize() error {
 	ci, err := b.GetChainInfo()
 	if err != nil {
 		return err
 	}
 	chainName := ci.Chain
 	params := GetChainParams(chainName)
-	b.Parser = NewBBKParser(params, b.ChainConfig)
+	b.Parser = NewBbkParser(params, b.ChainConfig)
 	b.Testnet = false
 	b.Network = "livenet"
 	glog.Info("rpc: block chain ", params.Name)
 	return nil
 }
 
-func (b *BBKRPC) GetBlock(hash string, height uint32) (*bchain.Block, error) {
+func (b *BbkRPC) GetBlock(hash string, height uint32) (*bchain.Block, error) {
 	var err error
 	if hash == "" && height > 0 {
 		hash, err = b.GetBlockHash(height)
@@ -78,6 +78,6 @@ func (b *BBKRPC) GetBlock(hash string, height uint32) (*bchain.Block, error) {
 	return block, nil
 }
 
-func (b *BBKRPC) GetTransactionForMempool(txid string) (*bchain.Tx, error) {
+func (b *BbkRPC) GetTransactionForMempool(txid string) (*bchain.Tx, error) {
 	return b.GetTransaction(txid)
 }
