@@ -16,22 +16,14 @@
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-dark bg-trezor">
                 <a class="navbar-brand" href="/" title="Home">
-                    <div alt="Trezor Wallet" style="margin-top: 3px; margin-right: 10px">
-                        <img src="/static/assets/img/logo.png?version=2" style="filter: brightness(10);max-height: 40px;" class="img-fluid">
-                        <!--<svg width="100" version="1.1" id="logotyp" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 163.7 41.9" space="preserve">
-                            <polygon points="101.1,12.8 118.2,12.8 118.2,17.3 108.9,29.9 118.2,29.9 118.2,35.2 101.1,35.2 101.1,30.7 110.4,18.1 101.1,18.1"></polygon>
-                            <path d="M158.8,26.9c2.1-0.8,4.3-2.9,4.3-6.6c0-4.5-3.1-7.4-7.7-7.4h-10.5v22.3h5.8v-7.5h2.2l4.1,7.5h6.7L158.8,26.9z M154.7,22.5h-4V18h4c1.5,0,2.5,0.9,2.5,2.2C157.2,21.6,156.2,22.5,154.7,22.5z"></path>
-                            <path d="M130.8,12.5c-6.8,0-11.6,4.9-11.6,11.5s4.9,11.5,11.6,11.5s11.7-4.9,11.7-11.5S137.6,12.5,130.8,12.5z M130.8,30.3c-3.4,0-5.7-2.6-5.7-6.3c0-3.8,2.3-6.3,5.7-6.3c3.4,0,5.8,2.6,5.8,6.3C136.6,27.7,134.2,30.3,130.8,30.3z"></path>
-                            <polygon points="82.1,12.8 98.3,12.8 98.3,18 87.9,18 87.9,21.3 98,21.3 98,26.4 87.9,26.4 87.9,30 98.3,30 98.3,35.2 82.1,35.2"></polygon>
-                            <path d="M24.6,9.7C24.6,4.4,20,0,14.4,0S4.2,4.4,4.2,9.7v3.1H0v22.3h0l14.4,6.7l14.4-6.7h0V12.9h-4.2V9.7z M9.4,9.7c0-2.5,2.2-4.5,5-4.5s5,2,5,4.5v3.1H9.4V9.7z M23,31.5l-8.6,4l-8.6-4V18.1H23V31.5z"></path>
-                            <path d="M79.4,20.3c0-4.5-3.1-7.4-7.7-7.4H61.2v22.3H67v-7.5h2.2l4.1,7.5H80l-4.9-8.3C77.2,26.1,79.4,24,79.4,20.3z M71,22.5h-4V18h4c1.5,0,2.5,0.9,2.5,2.2C73.5,21.6,72.5,22.5,71,22.5z"></path>
-                            <polygon points="40.5,12.8 58.6,12.8 58.6,18.1 52.4,18.1 52.4,35.2 46.6,35.2 46.6,18.1 40.5,18.1"></polygon>
-                        </svg>
-                        -->
+                    <div alt="Trezor Wallet" class="trezor-logo-svg-white">
+ 
+<img width="100" src="data:image/png;base64,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" alt="Red dot" />
+
                     </div>
                 </a>
                 <a class="navbar-brand" href="/">
-                    {{.CoinLabel}} Block Explorer
+                    Block Explorer
                 </a>
                 <button class="navbar-toggler" type="button" onclick="if(document.getElementById('toggler').className.indexOf('show')>0){document.getElementById('toggler').className='navbar-collapse collapse'}else{document.getElementById('toggler').className='navbar-collapse show'}">
                     <span class="navbar-toggler-icon"></span>
