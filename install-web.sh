@@ -77,9 +77,23 @@ tee -a /etc/nginx/sites-enabled/default << END
 
 server {
         server_name ${domain};
-        location / {
-        proxy_pass https://localhost:9130;
-    }
+        location / {        
+
+                add_header Access-Control-Allow-Origin '*' always;
+
+                proxy_pass https://${domain}:9130;
+
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_set_header Host $http_host;
+                proxy_set_header X-NginX-Proxy true;
+
+                # Enables WS support
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection "upgrade";
+                proxy_redirect off;
+        }
 
 
     listen 443 ssl; # managed by Certbot
@@ -91,8 +105,13 @@ server {
 }
 
 server {
-    listen 80 default_server;
-    server_name _;
+
+        server_name ${domain};
+        location / {
+        proxy_pass https://localhost:9130;
+    }
+
+    listen 80;
     return 301 https://$host$request_uri;
 }
 
