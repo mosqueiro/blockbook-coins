@@ -26,7 +26,7 @@ apt install software-properties-common -y
 
 sleep 1
 
-add-apt-repository ppa:bitcoin/bitcoin -y && apt-get update && apt-get install net-tools git screen nano bash-completion sshpass zram-config apt-transport-https ca-certificates curl gnupg-agent software-properties-common build-essential libtool autotools-dev autoconf pkg-config libssl-dev libevent-dev automake libminiupnpc-dev libdb4.8-dev libdb4.8++-dev nginx libboost-program-options-dev -y
+add-apt-repository ppa:bitcoin/bitcoin -y && apt-get update && apt-get install unzip net-tools git screen nano bash-completion sshpass zram-config apt-transport-https ca-certificates curl gnupg-agent software-properties-common build-essential libtool autotools-dev autoconf pkg-config libssl-dev libevent-dev automake libminiupnpc-dev libdb4.8-dev libdb4.8++-dev nginx libboost-program-options-dev -y
 
 sleep 1
 
