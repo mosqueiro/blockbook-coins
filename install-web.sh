@@ -87,14 +87,14 @@ server {
 
                 proxy_pass https://${domain}:9130;
 
-                proxy_set_header X-Real-IP $remote_addr;
-                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-                proxy_set_header Host $http_host;
+                proxy_set_header X-Real-IP \$remote_addr;
+                proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+                proxy_set_header Host \$http_host;
                 proxy_set_header X-NginX-Proxy true;
 
                 # Enables WS support
                 proxy_http_version 1.1;
-                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Upgrade \$http_upgrade;
                 proxy_set_header Connection "upgrade";
                 proxy_redirect off;
         }
@@ -107,7 +107,6 @@ server {
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 
 }
-
 server {
 
         server_name ${domain};
@@ -116,7 +115,7 @@ server {
     }
 
     listen 80;
-    return 301 https://$host$request_uri;
+    return 301 https://\$host\$request_uri;
 }
 
 END
