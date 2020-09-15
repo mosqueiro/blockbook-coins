@@ -14,19 +14,23 @@ read -p "${color}Please insert the coin ticker you want to build:${reset} " tick
 
 read -p "${color}please insert the domain name:${reset} " domain
 
-echo "${color}Adding some swap space..${reset}"
+# fallocate -l 2G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile
 
-sleep 1
-
-fallocate -l 2G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile
-
-sleep 1
+# sleep 1
 
 echo "${color}Building system dependencies........${reset}"
 
 sleep 1
 
-add-apt-repository ppa:bitcoin/bitcoin -y && apt-get update && apt-get install git apt-transport-https ca-certificates curl gnupg-agent software-properties-common build-essential libtool autotools-dev autoconf pkg-config libssl-dev libevent-dev automake libminiupnpc-dev libdb4.8-dev libdb4.8++-dev nginx libboost-program-options-dev -y
+add-apt-repository ppa:bitcoin/bitcoin -y && apt-get update && apt-get install git screen nano bash-completion sshpass zram-config apt-transport-https ca-certificates curl gnupg-agent software-properties-common build-essential libtool autotools-dev autoconf pkg-config libssl-dev libevent-dev automake libminiupnpc-dev libdb4.8-dev libdb4.8++-dev nginx libboost-program-options-dev -y
+
+sleep 1
+
+echo "${color}Adding some swap space..${reset}"
+
+sleep 1
+
+sed -i 's/totalmem \/ 2/totalmem * 2/g' /usr/bin/init-zram-swapping
 
 sleep 1
 
