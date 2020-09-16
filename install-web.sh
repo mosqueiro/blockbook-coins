@@ -85,7 +85,7 @@ server {
 
                 add_header Access-Control-Allow-Origin '*' always;
 
-                proxy_pass https://${domain}:9130;
+                proxy_pass https://localhost:9130;
 
                 proxy_set_header X-Real-IP \$remote_addr;
                 proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
