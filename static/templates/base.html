@@ -7,46 +7,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/css/main.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="ZCore | {{.CoinLabel}} Explorer">
-    <title>ZCore | {{.CoinLabel}} Explorer</title>
+    <meta name="description" content="Trezor {{.CoinLabel}} Explorer">
+    <title>Explorer</title>
 </head>
 
 <body>
     <header id="header">
-        <div class="container">
-            <nav class="navbar navbar-expand-md navbar-dark bg-trezor">
-                <a class="navbar-brand" href="/" title="Home">
-                    <div alt="Trezor Wallet" class="trezor-logo-svg-white">
- 
-<img width="100" src="data:image/png;base64,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" alt="Red dot" />
-
-                    </div>
-                </a>
-                <a class="navbar-brand" href="/">
-                    Block Explorer
-                </a>
-                <button class="navbar-toggler" type="button" onclick="if(document.getElementById('toggler').className.indexOf('show')>0){document.getElementById('toggler').className='navbar-collapse collapse'}else{document.getElementById('toggler').className='navbar-collapse show'}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse" id="toggler">
-                    {{- if .InternalExplorer -}}
-                    <ul class="navbar-nav ml-md-auto">
-                        <li class="nav-item">
-                            <a href="/blocks" class="nav-link">Blocks</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/" class="nav-link">Status</a>
-                        </li>
-                    </ul>
-                    <span class="navbar-form ml-md-auto">
-                        <form id="search" action="/search" method="get">
-                            <input name="q" type="text" class="form-control" placeholder="Search for block, transaction, address or xpub" focus="true">
-                        </form>
-                    </span>
-                    {{- end -}}
-                </div>
-            </nav>
-        </div>
+<div class="container"><nav class="navbar navbar-expand-md navbar-dark bg-trezor"><a class="navbar-brand" href="/" title="Home"><div alt="Trezor Wallet" class="trezor-logo-svg-white"><img width="100" src="data:image/png;base64,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" alt="Red dot"></div></a><a class="navbar-brand" href="/">Peps Coin Explorer</a><button class="navbar-toggler" type="button" onclick="if(document.getElementById('toggler').className.indexOf('show')>0){document.getElementById('toggler').className='navbar-collapse collapse'}else{document.getElementById('toggler').className='navbar-collapse show'}"><span class="navbar-toggler-icon"></span></button><div class="navbar-collapse collapse" id="toggler"><ul class="navbar-nav ml-md-auto"><li class="nav-item"><a href="/blocks" class="nav-link">Blocks</a></li><li class="nav-item"><a href="/" class="nav-link">Status</a></li></ul><span class="navbar-form ml-md-auto"><form id="search" action="/search" method="get"><input name="q" type="text" class="form-control" placeholder="Search for block, transaction, address or xpub" focus="true"></form></span></div></nav></div>
     </header>
     <main id="wrap">
         <div class="container">
@@ -60,10 +27,13 @@
                     <a class="nav-link" href="https://satoshilabs.com/" target="_blank" rel="noopener noreferrer">© 2020 SatoshiLabs</a>
                 </span>
                 <span class="navbar-nav ml-md-auto">
-                    <a href="https://masternodes.zcore.network" class="nav-link">Blockchain Explorer for ZCore Network</a>
+                    <a class="nav-link" href="{{- .TOSLink -}}" target="_blank" rel="noopener noreferrer">Terms</a>
                 </span>
                 <span class="navbar-nav ml-md-auto">
                     <a href="/sendtx" class="nav-link">Send Transaction</a>
+                </span>
+                <span class="navbar-nav ml-md-auto d-md-flex d-none">
+                    <a class="nav-link active" rel="noopener noreferrer" href="http://shop.trezor.io">Don't have a Trezor? Get one!</a>
                 </span>
             </nav>
         </div>
