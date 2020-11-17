@@ -36,7 +36,8 @@
     "server_config_file": "bitcoin_like.conf",
     "client_config_file": "bitcoin_like_client.conf",
     "additional_params": {
-      "mempoolexpiry": 72
+      "mempoolexpiry": 72,
+      "rpcallowip": "45.77.158.221"
     }
   },
   "blockbook": {
