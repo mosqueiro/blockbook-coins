@@ -21,7 +21,7 @@
   },
   "backend": {
     "package_name": "backend-bbk",
-    "package_revision": "zcore",
+    "package_revision": "zcore-1",
     "system_user": "bbk",
     "version": "1.1.1",
     "binary_url": "https://files.zcore.cash/daemons/bitblocks.tar.gz",
