@@ -17,6 +17,14 @@
                     <td class="data">{{$bb.Coin}}</td>
                 </tr>
                 <tr>
+                    <td>Host</td>
+                    <td class="data">zcore.host</td>
+                </tr>
+                <tr>
+                    <td>Version / Commit / Build</td>
+                    <td class="data">{{$bb.Version}} / <a href="https://github.com/trezor/blockbook/commit/{{$bb.GitCommit}}" target="_blank" rel="noopener noreferrer">{{$bb.GitCommit}}</a> / {{$bb.BuildTime}}</td>
+                </tr>
+                <tr>
                     <td>Synchronized</td>
                     <td class="data {{if not $bb.InSync}}text-danger{{else}}text-success{{end}}">{{$bb.InSync}}</td>
                 </tr>
