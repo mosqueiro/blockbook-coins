@@ -34,7 +34,7 @@ import (
 	"github.com/mosqueiro/blockbook-coins/bchain/coins/ravencoin"
 	"github.com/mosqueiro/blockbook-coins/bchain/coins/snowgem"
 	"github.com/mosqueiro/blockbook-coins/bchain/coins/zcoin"
-	"github.com/mosqueiro/blockbook/bchain/coins/zcr"	
+	"github.com/mosqueiro/blockbook-coins/bchain/coins/zcr"	
 	"github.com/mosqueiro/blockbook-coins/common"
 
 	"github.com/juju/errors"
