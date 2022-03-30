@@ -3,8 +3,8 @@ package zcr
 import (
 	"encoding/json"
 	"github.com/golang/glog"
-	"github.com/mosqueiro/blockbook/bchain"
-	"github.com/mosqueiro/blockbook/bchain/coins/btc"
+	"github.com/mosqueiro/blockbook-coins/bchain"
+	"github.com/mosqueiro/blockbook-coins/bchain/coins/btc"
 	"github.com/juju/errors"
 )
 
