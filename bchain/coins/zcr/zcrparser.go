@@ -1,8 +1,8 @@
 package zcr
 
 import (
-	"github.com/mosqueiro/blockbook/bchain"
-	"github.com/mosqueiro/blockbook/bchain/coins/btc"
+	"github.com/mosqueiro/blockbook-coins/bchain"
+	"github.com/mosqueiro/blockbook-coins/bchain/coins/btc"
 
 	"github.com/martinboehm/btcd/wire"
 	"github.com/martinboehm/btcutil/chaincfg"
