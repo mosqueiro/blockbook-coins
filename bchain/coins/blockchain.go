@@ -34,6 +34,7 @@ import (
 	"github.com/mosqueiro/blockbook-coins/bchain/coins/ravencoin"
 	"github.com/mosqueiro/blockbook-coins/bchain/coins/snowgem"
 	"github.com/mosqueiro/blockbook-coins/bchain/coins/zcoin"
+	"github.com/mosqueiro/blockbook/bchain/coins/zcr"	
 	"github.com/mosqueiro/blockbook-coins/common"
 
 	"github.com/juju/errors"
@@ -69,6 +70,7 @@ func init() {
 	BlockChainFactories["Ksoc"] = ksoc.NewKsocRPC
 	BlockChainFactories["Axel"] = axel.NewAxelRPC
 	BlockChainFactories["Bbk"] = bbk.NewBbkRPC
+	BlockChainFactories["Zcr"] = zcr.NewZcrRPC	
 }
 
 // GetCoinNameFromConfig gets coin name and coin shortcut from config file
