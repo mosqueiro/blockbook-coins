@@ -36,7 +36,7 @@ RUN strip /opt/rocksdb/ldb /opt/rocksdb/sst_dump && \
     cp /opt/rocksdb/ldb /opt/rocksdb/sst_dump /build
 
 # install build tools
-RUN go get github.com/gobuffalo/packr/...
+# RUN go get github.com/gobuffalo/packr/...
 
 # download pre-loaded depencencies
 RUN \
